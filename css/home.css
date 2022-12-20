@@ -1,0 +1,123 @@
+body{
+    overflow: hidden;
+    background-color: var(--color-4);
+}
+section{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.background-tesla-titre{
+    transform: rotate(-45deg);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: -300px;
+}
+.note-left{
+    position: absolute;
+    color: rgba(255, 255, 255, .2);
+    font-size: 1.5em;
+    z-index: 3;
+    left: 20px;
+    bottom: 20px;
+}
+.note-right{
+    position: absolute;
+    color: rgba(255, 255, 255, .2);
+    font-size: 1.5em;
+    z-index: 3;
+    right: 20px;
+    bottom: 20px;
+}
+@keyframes translate {
+    0%
+    {
+        transform: translateX(0);
+    }
+    100%
+    {
+        transform: translateX(100px);
+    }
+}
+.tesla-titre{
+    font-size: 3em;
+    animation: translate 2s linear infinite;
+}
+/*on definie la taile des deux partie*/
+.droit, .gauche{
+    width: 49.75%;
+    height: 100%;
+    transition: width 1s ease-in-out;
+}
+.milieu{
+    background: var(--color-4);
+    width: .5%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+/*quand une partie et hover elle prend plus de taille */
+.gauche:hover{
+    width: 80%;
+}
+.droit:hover{
+    width: 80%;
+}
+video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+/*on met les titre au bon endroit grace au position absolute*/
+.Diagnostique_interne{
+    position:absolute;
+    z-index: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--color-0);
+    right: 100px;
+}
+.Diagnostique_externe{
+    position:absolute;
+    z-index: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--color-0);
+    left: 100px;
+}
+@media (max-width : 1222px){
+    .milieu{
+        display: none;
+    }
+    section{
+        flex-direction: column;
+    }
+    .droit{
+        width: 100%;
+        height: 50%;
+    }
+    .gauche{
+        width: 100%;
+        height: 50%;
+    }
+    .Diagnostique_externe{
+        top: 25%;
+        transform: translateY(-25%);
+        right: 100px;
+    }
+    .Diagnostique_interne{
+        top: 75%;
+        transform: translateY(-75%);
+        left: 100px;
+    }
+}

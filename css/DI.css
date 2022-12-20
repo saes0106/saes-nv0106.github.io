@@ -1,0 +1,190 @@
+body{
+    overflow-x: hidden;
+}
+.fondecran{
+    position: fixed;
+    left: 0;
+}
+.degrader{
+    height: 100px;
+    width: 100vw;
+    position: relative;
+    top: 100vh;
+    background: var(--color-deagrder-fondecran);
+}
+.haute{
+    position: relative;
+    z-index: 1;
+    top: 100vh;
+    width: 100vw;
+    height: auto;
+    display: inline-block;
+    background-color: white;
+    margin-bottom: -5px;
+}
+/* Permet de definir la taille du triangle*/
+.interieur-triangle{
+    position: relative;
+}
+.triangle{
+    top: 100vh;
+    position: relative;
+    z-index: 1;
+    height: 20vh;
+    border-top: 50vh solid white;
+    border-bottom: 50vh solid white;
+}
+.t-gauche{
+    border-left: 100vw solid rgba(204, 0, 0, .5);
+}
+.t-droit{
+    border-right: 100vw solid rgba(204, 0, 0, .5);
+}
+.bas{
+    height: auto;
+    display: inline-block;
+    min-height: 20vh;
+    position: relative;
+    z-index: 1;
+    top: 100vh;
+    width: 100%;
+    background-color: white;
+
+}
+.millieu{
+    position: relative;
+    top: 100vh;
+    display: inline-block;
+    height: auto;
+    width: 100%;
+    background-color: white;
+    margin-bottom: -3px;
+}
+/* zone de texte avec image pour les rse*/
+.rse-ecolo{
+    position: relative;
+    left: 50%;
+    height: 50vh;
+    display: inline-block;
+}
+.image-ecolo{
+    position:relative;
+    z-index: 2;
+    width: 300px;
+}
+.titre-texte-ecolo{
+    top: -300px;
+    width: 500px;
+    right: 50px; 
+    position: relative;
+    font-size: 20px;
+    z-index: 3;
+}
+.div-texte-ecolo{
+    position: relative;
+    z-index: 3;
+    right: 390px;
+    top: -300px;
+    width: 500px;
+    border-top: 5px solid rgb(145, 197, 65);
+    border-left: 5px solid rgb(145, 197, 65);
+    border-bottom: 5px solid rgb(145, 197, 65);
+    padding: 20px;
+    border-radius: 40px 0px 0px 40px;
+}
+.rse-eco{
+    position: absolute;
+    top: 140vh;
+    width: 50%;
+}
+.image-eco{
+    position: absolute;
+    z-index: 2;
+    transform: translateY(50%);
+    left: 100px;
+    width: 500px;
+}
+.titre-texte-eco{
+    font-size: 20px;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 400px;
+    color: white;
+}
+.div-texte-eco{
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 550px;
+    border-top: 5px solid rgb(233, 208, 87);
+    border-bottom: 5px solid rgb(233, 208, 87);
+    border-right: 5px solid rgb(233, 208, 87);
+    width: 50%;
+    padding: 20px 20px 20px 100px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    color: white;
+
+}
+/*creation d'un tableau avec fusion de case*/
+table{
+    width: 60%;
+    height: 75vh;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 50px;
+}
+th{
+    font-size: 20px;
+}
+.image-table{
+    width: 300px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.article-pestel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    width: 70%;
+    transform: translateX(25%)
+}
+.titre-pestel{
+    font-size: 2em;
+}
+.plus-ou-moin{
+    display: flex;
+    flex-wrap: wrap;
+}
+.plus, .moin{
+    width: 50%;
+}
+.logo-plus, .logo-moin{
+    text-align: center;
+}
+.liste-texte{
+    list-style-type: none;
+}
+.liste-li{
+    margin: 10px;
+}
+.adj{
+    transform: translateX(50%);
+}
+.pestel-triangle{
+    position: absolute;
+    top: 140vh;
+    color: white;
+}
+.note{
+    position: absolute;
+    color: rgba(255, 255, 255, .2);
+    font-size: 1.5em;
+    z-index: 3;
+    right: 20px;
+    bottom: 20px;
+}

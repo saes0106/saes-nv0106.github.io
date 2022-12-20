@@ -1,0 +1,91 @@
+body{
+    background-color: var(--color-0);
+    overflow: hidden;
+}
+.fondecran{
+    position: relative;
+}
+.presentation{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    position: absolute;
+    z-index: 3;
+    gap: 2%;
+    left: 50%;
+    margin-left: -10px;
+    transform: translateX(-50%);
+
+}
+/*On definie endroit ou se situe les etiquette*/
+.placement{
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, .3);
+    height: 80px;
+    width: 10%;
+    border-radius: 20px;
+    position:relative;
+    bottom: 80px;
+
+    transition: 2s ease-in-out;
+}
+/*on cree les etiquette et quand elle son hover elle prenne plus de place */
+.etiquette{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: var(--color-opacity-white);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    border-radius: 20px;
+    transition: 2s ease-in-out;
+    transition-delay: .3s;
+    overflow: hidden;
+}
+.etiquette:hover{
+    width: 100%;
+    height: 500px;
+    transform: translateY(-100%);
+    overflow: auto;
+}
+.placement:hover .etiquette{
+    overflow: auto;
+    width: 100%;
+    height: 500px;
+    transform: translateY(-100%);
+}
+.placement:hover{
+    flex-grow: 10;
+}
+
+.adj{
+    margin-top: 8px;
+}
+.titre-texte{
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+.lien-texte{
+    color: var(--color-6);
+    cursor: pointer;
+}
+.lien-texte:hover{
+    color: red;
+}
+.image-etiquette{
+    margin-top: 50px;
+    width: 90%;
+    height: 60%;
+    border-radius: 20px;
+    object-fit: cover;
+    transition: 2s ease-in-out;
+    transition-delay: .3s;
+}
+@media (max-width : 1222px){
+    .presentation{
+        gap: 6%;    
+    }
+    .image-etiquette{
+        display: none;
+    }
+}
